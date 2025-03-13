@@ -43,7 +43,7 @@ class RailFenceCipher:
             rails[rail_index] = rails[rail_index][1:]
             if rail_index == 0:
                 direction = 1
-            elif rail_index == rail_lengths - 1:
+            elif rail_index == num_rails - 1:
                 direction = -1
             rail_index += direction
             
