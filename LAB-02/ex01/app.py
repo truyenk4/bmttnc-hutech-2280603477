@@ -18,75 +18,91 @@ def home():
 
 @app.route("/caesar")
 def caesar():
-    filename = request.args.get("file", "caesar_cipher.py")  # Mặc định chạy script.py nếu không có file
-
-    # Định nghĩa đường dẫn thư mục chứa file
-    script_dir = r"D:\Users\Documents\Code\Python\bmttnc-hutech-2280603477\LAB-03"
-    
-    # Ghép đường dẫn đúng
-    script_path = os.path.join(script_dir, filename)
-
-    # Kiểm tra file có tồn tại không
-    if not os.path.isfile(script_path):
-        return f"File {script_path} không tồn tại!", 404
-
-    # Chạy file Python
-    result = subprocess.run(["python", script_path], capture_output=True, text=True)
-    return render_template('index.html')
+    return render_template('caesar.html')
 
 @app.route("/vigenere")
 def vigenere():
-    filename = request.args.get("file", "vigenere_cipher.py")  # Mặc định chạy script.py nếu không có file
-
-    # Định nghĩa đường dẫn thư mục chứa file
-    script_dir = r"D:\Users\Documents\Code\Python\bmttnc-hutech-2280603477\LAB-03"
-    
-    # Ghép đường dẫn đúng
-    script_path = os.path.join(script_dir, filename)
-
-    # Kiểm tra file có tồn tại không
-    if not os.path.isfile(script_path):
-        return f"File {script_path} không tồn tại!", 404
-
-    # Chạy file Python
-    result = subprocess.run(["python", script_path], capture_output=True, text=True)
-    return render_template('index.html')
+    return render_template('vigenere.html')
 
 @app.route("/railfence")
 def railfence():
-    filename = request.args.get("file", "railfence_cipher.py")  # Mặc định chạy script.py nếu không có file
-
-    # Định nghĩa đường dẫn thư mục chứa file
-    script_dir = r"D:\Users\Documents\Code\Python\bmttnc-hutech-2280603477\LAB-03"
-    
-    # Ghép đường dẫn đúng
-    script_path = os.path.join(script_dir, filename)
-
-    # Kiểm tra file có tồn tại không
-    if not os.path.isfile(script_path):
-        return f"File {script_path} không tồn tại!", 404
-
-    # Chạy file Python
-    result = subprocess.run(["python", script_path], capture_output=True, text=True)
-    return render_template('index.html')
+    return render_template('railfence.html')
 
 @app.route("/playfair")
 def playfair():
-    filename = request.args.get("file", "playfair_cipher.py")  # Mặc định chạy script.py nếu không có file
+    return render_template('playfair.html')
 
-    # Định nghĩa đường dẫn thư mục chứa file
-    script_dir = r"D:\Users\Documents\Code\Python\bmttnc-hutech-2280603477\LAB-03"
+# @app.route("/caesar")
+# def caesar():
+#     filename = request.args.get("file", "caesar_cipher.py")  # Mặc định chạy script.py nếu không có file
+
+#     # Định nghĩa đường dẫn thư mục chứa file
+#     script_dir = r"D:\Users\Documents\Code\Python\bmttnc-hutech-2280603477\LAB-03"
     
-    # Ghép đường dẫn đúng
-    script_path = os.path.join(script_dir, filename)
+#     # Ghép đường dẫn đúng
+#     script_path = os.path.join(script_dir, filename)
 
-    # Kiểm tra file có tồn tại không
-    if not os.path.isfile(script_path):
-        return f"File {script_path} không tồn tại!", 404
+#     # Kiểm tra file có tồn tại không
+#     if not os.path.isfile(script_path):
+#         return f"File {script_path} không tồn tại!", 404
 
-    # Chạy file Python
-    result = subprocess.run(["python", script_path], capture_output=True, text=True)
-    return render_template('index.html')
+#     # Chạy file Python
+#     result = subprocess.run(["python", script_path], capture_output=True, text=True)
+#     return render_template('index.html')
+
+# @app.route("/vigenere")
+# def vigenere():
+#     filename = request.args.get("file", "vigenere_cipher.py")  # Mặc định chạy script.py nếu không có file
+
+#     # Định nghĩa đường dẫn thư mục chứa file
+#     script_dir = r"D:\Users\Documents\Code\Python\bmttnc-hutech-2280603477\LAB-03"
+    
+#     # Ghép đường dẫn đúng
+#     script_path = os.path.join(script_dir, filename)
+
+#     # Kiểm tra file có tồn tại không
+#     if not os.path.isfile(script_path):
+#         return f"File {script_path} không tồn tại!", 404
+
+#     # Chạy file Python
+#     result = subprocess.run(["python", script_path], capture_output=True, text=True)
+#     return render_template('index.html')
+
+# @app.route("/railfence")
+# def railfence():
+#     filename = request.args.get("file", "railfence_cipher.py")  # Mặc định chạy script.py nếu không có file
+
+#     # Định nghĩa đường dẫn thư mục chứa file
+#     script_dir = r"D:\Users\Documents\Code\Python\bmttnc-hutech-2280603477\LAB-03"
+    
+#     # Ghép đường dẫn đúng
+#     script_path = os.path.join(script_dir, filename)
+
+#     # Kiểm tra file có tồn tại không
+#     if not os.path.isfile(script_path):
+#         return f"File {script_path} không tồn tại!", 404
+
+#     # Chạy file Python
+#     result = subprocess.run(["python", script_path], capture_output=True, text=True)
+#     return render_template('index.html')
+
+# @app.route("/playfair")
+# def playfair():
+#     filename = request.args.get("file", "playfair_cipher.py")  # Mặc định chạy script.py nếu không có file
+
+#     # Định nghĩa đường dẫn thư mục chứa file
+#     script_dir = r"D:\Users\Documents\Code\Python\bmttnc-hutech-2280603477\LAB-03"
+    
+#     # Ghép đường dẫn đúng
+#     script_path = os.path.join(script_dir, filename)
+
+#     # Kiểm tra file có tồn tại không
+#     if not os.path.isfile(script_path):
+#         return f"File {script_path} không tồn tại!", 404
+
+#     # Chạy file Python
+#     result = subprocess.run(["python", script_path], capture_output=True, text=True)
+#     return render_template('index.html')
 
 @app.route("/playfair/encrypt", methods=['POST'])
 def playfair_encrypt():
